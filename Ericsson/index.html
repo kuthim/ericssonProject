@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ericsson Project</title>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/tools.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+	</head>
+	<body>
+		
+		<div id="myHeader">
+			<?php 
+			include 'php/saveLoad.php';?>
+			<div id="header"> 
+			<div class="logo"><img src="image/ericsson_logo.PNG"></div>
+			<div class="menu" id="userMenu"><font size="2">
+			<ul><a href="http://html-color-codes.info/">Colorful XD</a></font></ul>
+			<ul><a href="https://github.com/Ryanapolis/Ericsson">GITHUB</a></ul>
+			<ul class = "Help">
+				<li>
+					<a href="#" class="subHelp" id = "files">Help</a>
+						<ul>
+							<li id="h_onLine" class=""><a href="#">Online Help</a></li>
+							<li id="h_tutorial"><a href="#">Tutorial</a></li>
+							<li id="h_documentation"><a href="#">Documentation</a></li>
+							<li id="h_contacts"><a href="#">Contacts</a></li>
+						</ul>
+				</li>
+			</ul>
+			<ul class = "Export">
+				<li>
+					<a href="#" class="subExport" id = "files">Export</a>
+						<ul>
+							<li id="e_Temp" class=""><a href="#">Export Template</a></li>
+							<li id="e_Comm"><a href="#">Export Command</a></li>
+						</ul>
+				</li>
+			</ul>
+			<ul class = "Admin">
+				<li>
+					<a href="#" class="subAdmin" id = "files">Admin</a>
+						<ul>
+							<li id="Admin1" class=""><a href="#">Admin Roll1</a></li>
+							<li id="Admin2"><a href="#">Admin Roll2</a></li>
+						</ul>
+				</li>
+			</ul>
+			<ul class = "Files">
+				<li>
+					<a href="#" class="subFiles" id = "files">Files</a>
+						<ul>
+							<li id="f_newProject" class=""><a href="#">New Project</a></li>
+							<li id="f_openProject"><a href="#">Open Project</a></li>
+							<li id="f_saveProject"><a href="#">Save Project</a></li>
+							<li id="f_saveProjectAs"><a href="#">Save Project As..</a></li>
+						</ul>
+				</li>
+			</ul>
+			</div>
+		</div>
+		</div>
+		
+		
+		<!--******************************************************************************************-->
+		<div id="main">
+			<div class="table" id="mainTable" style="background-color:#A9BCF5">
+				<div id="topMenu">
+					<ul id="createMenu">
+						<li>
+							<div class="tool subCreate" id = "subCreateMenu">Open</div>
+							<ul>
+							<li id="newProp" class="tool">New Project</li>
+							<li id="openProp" class="tool">Open Project</li>
+							<li id="saveAs" class="tool">Save As..</li>
+							<li id="toBeAdd1" class="tool">bla..</li>
+							<li id="toBeAdd2" class="tool">bla..</li>
+							</ul>
+						</li>
+					</ul>
+					<div id="save" class="tool" >Save</div>
+					<ul class = "Router" id="Router">
+						<li>
+							<div class="tool subRouter" id = "subRouter">Routers</div>
+							<ul>
+							<li id="IPOS" class="router">IPOS</li>
+							<li id="SSRS" class="router">SSRS-SIM</li>
+							<li id="SPIR" class="router">SPIRENT</li>
+							<li id="Linux" class="router">Linux</li>
+							<li id="Traffic" class="router">Traffic Generator</li>
+							</ul>
+						</li>
+					</ul>
+					<div id="remove" class="tool" >Remove Routers</div>
+					<ul class = "Switch" id="Switch">
+						<li>
+							<div class="tool subSwitch" id = "subSwitch">Switch</div>
+							<ul>
+							<li id="addSwitch" class="router">Add Switch</li>
+							<li id="removeSwitch" class="router">Remove Switch</li>
+							<li id="cancel" class="router">Cancel</li>
+							<li id="bla1..." class="router">bla..</li>
+							<li id="bla2..." class="router">bla..</li>
+							</ul>
+						</li>
+					</ul>
+					<!-- <div class="tool" id="itemBox_1"><strong>itemBox</strong><br/><br/> -->
+					<!--<p id = "debug">USED For Debug</p></div>-->
+					
+				</div>
+				
+			<!--******************************************************************************************-->
+			<div class="tool" id="popProp">
+				Device Name: <input type="text" class=rProp id="deviceName" value=""><br>
+				Max number of Ports: <input type="text" class=rProp id="numPorts" value=""><br>
+				bla 1...: <input type="text" class=rProp id="bla1" value=""><br>
+				bla 2...: <input type="text" class=rProp id="bla2" value=""><br>
+				bla 3...: <input type="text" class=rProp id="bla3" value=""><br>
+				<input type="button" id="createNew" value="Create"><input type="button" id="cancelNew" value="Cancel"><br>
+			</div>
+			
+			<div class="tool" id="new_popProp">
+				Project Name: <input type="text" class=rProp id="new_pro_name" value=""><br>
+				bla 0...: <input type="text" class=rProp id="bla0" value=""><br>
+				bla 1...: <input type="text" class=rProp id="bla1" value=""><br>
+				<input type="button" id="new_pro" value="Create"><input type="button" id="cancel_pro" value="Cancel"><br>
+			</div>
+			
+			<div class="tool" id="saveProp">
+				Project Name: <input type="text" class=rProp id="save_pro_name" value=""><br>
+				bla 0...: <input type="text" class=rProp id="sbla0" value=""><br>
+				<input type="button" id="save_pro" value="Create"><input type="button" id="cancel_save" value="Cancel"><br>
+			</div>
+			
+			<div class="tool" id="enablePorts">
+				Port Name: <input type="text" class=rProp id="port_name" value=""><br>
+				bla 0...: <input type="text" class=rProp id="pbla0" value=""><br>
+				<input type="button" id="enable_port" value="Enable"><input type="button" id="cancel_enable" value="Cancel"><br>
+			</div>
+			
+			</div>
+			
+		</div>
+			
+	</body>
+	<script src="js/constant.js"></script>
+	<script src="js/myHeader.js"></script>
+	<script src="js/menu.js"></script>
+	<script src="js/create.js"></script>
+	<script src="js/connection.js"></script>
+	<script src="js/saveLoad.js"></script>
+</html>
+
